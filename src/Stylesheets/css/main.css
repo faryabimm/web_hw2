@@ -1,0 +1,921 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-col-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+.flex-row-container {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.flex-row-container-2 {
+
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.z-index-modifier {
+    z-index: 2;
+}
+
+@media all and (max-width: 592px) {
+    .dash_card {
+        min-width: 95%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .welcome_card {
+        display: none
+    }
+
+    .first_dropdown {
+        display: none
+    }
+
+    .Go_to_docs {
+        display: none
+    }
+
+    .first_dropdown_button {
+        display: none
+    }
+
+    .first_dropdown_button_name {
+        display: none
+    }
+
+    .arrow_down {
+        display: none
+    }
+}
+
+@media all and (max-width: 900px) {
+
+    #large_navbar {
+        display: none
+    }
+
+    #small_navbar {
+        display: none
+    }
+
+    #static_topbar .logo_picture {
+        display: none
+    }
+
+    .hamburger-logo {
+        display: inline-flex
+    }
+}
+
+@media all and (min-width: 900px) {
+
+    /*.firebase_left_nav{display: none}*/
+    /*.logo_picture{display: none}*/
+    .hamburger-logo {
+        display: none
+    }
+}
+
+.hamburger-logo {
+    margin-top: 11px;
+    margin-left: 18px;
+    margin-right: 4px;
+    color: #b4dcf1;
+    /*display: none;*/
+}
+
+.hamburger-logo:hover {
+    margin-top: 11px;
+    margin-left: 18px;
+    margin-right: 4px;
+    color: #ffffff;
+    /*display: none;*/
+}
+
+.flex-col-container-2 {
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.firebase_topbar {
+
+    background-color: #0288D1;
+    width: 100%;
+    height: 48px;
+    z-index: 3;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.firebase_topbar_floating {
+    background-color: #FFFFFF;
+    width: 256px;
+    height: 48px;
+    z-index: 3;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.firebase_topbar_bottom_shadow {
+    /*background-color: black;*/
+    height: 5px;
+    background: linear-gradient(to bottom, #03699b, #039be5);
+}
+
+.firebase_topbar_bottom_shadow_for_nav {
+    height: 5px;
+    background: linear-gradient(to bottom, #b6b6b6, #fafafa);
+}
+
+.user_image {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    margin-top: 6px;
+}
+
+.three_points {
+    margin-top: 11px;
+    margin-right: 2px;
+}
+
+.firebase_topbar_topleft_logo {
+    width: 142px;
+    height: 48px;
+
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    /*overflow: hidden;*/
+    cursor: pointer;
+    outline: none;
+
+}
+
+.dropdown_div {
+    border: solid #e0e0e0;
+    border-width: 0 0 1px 0;
+    height: auto;
+    padding: 0 0 0 0;
+}
+
+.first_dropdown_button {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+    /*padding: 8px 16px;*/
+    vertical-align: middle;
+    /*overflow: hidden;*/
+    text-decoration: none;
+    color: #b4dcf1;
+    background-color: #0288d1;
+    text-align: center;
+
+}
+
+.first_dropdown_button:hover {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    /*padding: 8px 16px;*/
+    vertical-align: middle;
+    /*overflow: hidden;*/
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #0288d1;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+
+}
+
+.topbar_row_container {
+    width: 100%;
+
+}
+
+.second_right_buttons {
+    /*position: fixed;*/
+    /*display: inline-flex;*/
+    cursor: pointer;
+    float: right;
+}
+
+.first_dropdown {
+    padding: 0 0 0 0;
+    margin-top: 12px;
+    margin-left: 10px;
+
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    background-color: #0288d1;
+    position: fixed;
+    display: inline-flex;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.Go_to_docs {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-only {
+    font-size: 13px;
+    font-weight: 500;
+    color: #bee9fe;
+    background-color: #039BE5;
+    margin: auto 10px auto auto;
+    vertical-align: middle;
+    horiz-align: center;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+    border-radius: 20px;
+}
+
+.first_dropdown_button_name {
+    margin-top: 0;
+    margin-left: 32.5px;
+    height: 10px;
+    font-stretch: condensed;
+    letter-spacing: 0.02px;
+    font-size: 13.5px;
+    font-weight: bold;
+    transform: scale(1, 1.1);
+
+}
+
+.Overview_word {
+    color: white;
+    margin-top: 12px;
+    margin-left: 25px;
+    height: 10px;
+    font-stretch: condensed;
+    letter-spacing: 0.02px;
+    font-size: 19px;
+
+    display: inline-block;
+
+    font-weight: normal;
+    transform: scale(1, 1.1);
+}
+
+.arrow_down {
+    margin-top: 4.5px;
+    margin-left: 10.5px;
+    height: 5px;
+    font-stretch: condensed;
+    letter-spacing: 0.02px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: scale(0.95, 0.55);
+}
+
+.logo_name {
+    padding: 0;
+    margin-top: 5.5px;
+    font-size: 22px;
+    margin-left: 10px;
+    color: white;
+    display: flex;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.14px;
+    font-weight: normal;
+
+}
+
+.logo_name_floating {
+    padding: 0;
+    margin-top: 5.5px;
+    font-size: 22px;
+    margin-left: 10px;
+    color: #757575;
+    display: flex;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.14px;
+    font-weight: normal;
+
+}
+
+.first_dropdown:hover {
+    color: #FFFFFF;
+}
+
+.logo_picture {
+    width: 28px;
+    height: 28px;
+    margin-left: 14px;
+    margin-top: 8px;
+    top: -1px;
+    text-align: center;
+
+}
+
+.firebase_left_nav {
+    width: 256px;
+    color: #757575;
+    height: auto;
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*bottom: 0px;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.firebase_left_nav_collapsed {
+    width: 68px;
+    color: #757575;
+    height: auto;
+    padding: auto;
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*bottom: 0px;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.firebase_body {
+    top: -12px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: #FAFAFA;
+    z-index: -2;
+}
+
+.firebase_dash {
+    background-color: #cfd8dc;
+    width: 100%;
+    height: 630px; /* MANUAL HEIGHT */
+    /*z-index: -2;*/
+    overflow-y: auto;
+}
+
+.firebase_dash .overview_bar {
+    height: 56px;
+    width: 100%;
+    background-color: #039BE5;
+    z-index: +1;
+
+}
+
+.firebase_dash .overview_bar .help_button {
+    color: #B0DFF6;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-right: 24px;
+    height: auto;
+    width: auto;
+}
+
+.firebase_dash .overview_bar .help_button:hover {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-right: 24px;
+    height: auto;
+    width: auto;
+}
+
+.firebase_dash .welcome_card {
+    background-color: #FFFFFF;
+    height: 344px;
+    max-width: 100%;
+    padding: 48px 22% 76px 22%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.firebase_dash .welcome_card img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.firebase_dash .welcome_card .card {
+    margin: auto;
+}
+
+.firebase_dash .welcome_card a {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    color: #777777;
+}
+
+.firebase_dash .welcome_card .card_item_label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.firebase_dash .discover_firebase {
+
+    font-size: 14px;
+    margin: 45px 12px 12px 12px;
+    color: rgba(0, 0, 0, 0.54);
+
+}
+
+.firebase_dash .terms-privacy {
+
+    font-size: 13px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.38);
+
+}
+
+.firebase_dash .terms-privacy a {
+    cursor: pointer;
+}
+
+.firebase_dash .terms-privacy a:hover {
+    color: #039BE5;
+}
+
+.firebase_dash .dashboard {
+    max-width: 984px;
+    padding: 0 12px 0 12px;
+    margin: auto;
+}
+
+.firebase_dash .dashboard .card_holder {
+    margin: auto;
+    padding: auto;
+    position: relative;
+}
+
+.firebase_dash .dash_card {
+    float: left;
+    position: relative;
+    width: 296px;
+    height: 296px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    margin: 0 12px 24px 12px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.firebase_dash .dash_card img {
+    width: auto;
+    height: 124px;
+}
+
+.firebase_dash .dash_card .card_body {
+    padding: 16px;
+    height: 124px;
+    width: auto;
+}
+
+.firebase_dash .dash_card .card_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.firebase_dash .dash_card .card_description {
+    font-size: 13px;;
+    color: rgba(0, 0, 0, 0.54);
+    line-height: 20px;
+}
+
+.firebase_dash .dash_card .card_footer {
+    height: 44px;
+    margin: 15px auto auto;
+}
+
+.firebase_left_nav #scrollable1 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 525px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.firebase_left_nav_collapsed #scrollable2 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 586px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.firebase_left_nav #scrollable3 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 570px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.left_nav_header_modifier {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    /*height: 58px;*/
+}
+
+.left_nav_header_overview_modifier {
+    font-size: 14px;
+    margin-left: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    padding: 0 0 0 0;
+    transform: scale(0.9, 1);
+}
+
+.firebase_left_nav .left_nav_header {
+
+    width: 100%;
+    height: 56px;
+    background-color: #FAFAFA;
+    color: #039BE5;
+    border: 1px none #DCDCDC;
+    border-bottom-style: solid;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    vertical-align: middle;
+}
+
+.firebase_left_nav_collapsed .left_nav_header {
+    width: 100%;
+    height: 88px;
+    background-color: #FAFAFA;
+    color: #039BE5;
+    border: 1px none #DCDCDC;
+    border-bottom-style: solid;
+    /*padding: auto;*/
+    padding-top: 8px;
+    margin-bottom: 8px;
+    /*margin-top: 8px;*/
+
+    vertical-align: middle;
+}
+
+.firebase_left_nav .left_nav_footer {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #DCDCDC;
+    bottom: 0;
+
+}
+
+.firebase_left_nav .left_nav_footer .spark {
+    width: 100%;
+    height: 60px;
+
+    padding: 6px 24px 12px 24px;
+}
+
+.firebase_left_nav .left_nav_footer .spark .top_label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.firebase_left_nav .left_nav_footer .spark .bottom_label {
+    font-size: 12px;
+}
+
+.spark_container {
+    margin: auto;
+    min-width: 80px
+}
+
+.upgrade_button {
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #039BE5;
+    background-color: inherit;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 8px 12px 8px 12px;
+    vertical-align: middle;
+    horiz-align: center;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+    border-radius: 3px;
+}
+
+.dash_card .upgrade_button {
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #039BE5;
+    background-color: inherit;
+    text-transform: uppercase;
+    margin: auto auto auto 87px;
+    padding: 8px 12px 2px 12px;
+    vertical-align: middle;
+    horiz-align: center;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+}
+
+.card_footer a {
+    padding-left: 20px;
+    color: #039be5;
+}
+
+.spark .upgrade_button {
+    margin-left: 58px;
+    font-size: 13px;
+}
+
+.upgrade_button:hover {
+    background-color: #E0F3FC;
+}
+
+.sidebar_collapse_collapse {
+    width: 100%;
+    height: 44px;
+    font-size: 24px;
+    padding: 4px 16px 0 210px;
+    border: none;
+    /*border-top: 1px solid #DCDCDC;*/
+    color: #737373;
+
+    background-color: inherit;
+    vertical-align: middle;
+    horiz-align: center;
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+}
+
+.firebase_left_nav_collapsed .sidebar_collapse {
+    width: 100%;
+    height: 44px;
+    font-size: 24px;
+    padding: 4px 16px 0 25px;
+    margin: auto;
+
+    border: none;
+    color: #737373;
+
+    background-color: inherit;
+    vertical-align: middle;
+    horiz-align: center;
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+
+}
+
+.firebase_left_nav .navbar_item {
+    height: 36px;
+    width: auto;
+    background-color: inherit;
+    color: inherit;
+    padding: 2px 24px 0 24px;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+
+}
+
+.firebase_left_nav_collapsed .navbar_item {
+    height: 36px;
+    width: auto;
+    background-color: inherit;
+    color: inherit;
+    padding: 0 24px 30px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+    margin: auto;
+
+}
+
+.firebase_left_nav .navbar_item span {
+    padding-left: 16px;
+}
+
+.firebase_left_nav .navbar_item i {
+    width: 20px;
+    height: 20px;
+
+    font-family: "Material Icons", serif;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+.firebase_left_nav_collapsed .navbar_item i {
+    width: 20px;
+    height: 20px;
+
+    font-family: "Material Icons", serif;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+.firebase_left_nav .navbar_item:hover {
+    background-color: #EEEEEE;
+
+}
+
+.firebase_left_nav_collapsed .navbar_item:hover {
+    background-color: #EEEEEE;
+
+}
+
+.firebase_left_nav .left_nav_header .navbar_item {
+    /*margin-right: 1px;*/
+    border-right: 1px solid #DCDCDC;
+    width: 197px;
+
+}
+
+.firebase_left_nav .left_nav_header #settings, #settings3 {
+    font-size: 20px;
+    width: 20px;
+    padding: 3px 8px 0 13px;
+    border-right: none;
+    vertical-align: middle;
+    horiz-align: center;
+    color: #737373;
+    background-color: inherit;
+}
+
+.firebase_left_nav_collapsed .left_nav_header #settings2 {
+    color: #737373;
+}
+
+.firebase_left_nav .navbar_label {
+    height: 24px;
+    width: auto;
+    color: #9E9E9E;
+    background-color: #FFFFFF;
+    padding: 8px 24px 0 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.firebase_left_nav_collapsed .navbar_separator {
+    width: auto;
+    background-color: inherit;
+    margin: 8px auto;
+
+    /*padding: 80px 24px 0px 24px;*/
+    font-size: 12px;
+    text-transform: uppercase;
+    border-top: 1px solid #d4d4d4;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+
+}
+
+.material-icons {
+    font-family: 'Material Icons', serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.material-icons-2 {
+    font-family: 'Material Icons', serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    /*display: inline-block;*/
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#floating_navbar {
+    /*background: rgba(0,0,0,0.4);*/
+    /*color: rgba(0,0,0,0.87);*/
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    /*position: relative;*/
+    display: none;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);;
+    /*box-shadow: 50px 0px 900px rgba(0,0,0,0.8);*/
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: +10;
+}
+
+#floating_navbar .left_nav_footer {
+    border: none;
+}
+
+#navbar_overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+    z-index: 9;
+    cursor: pointer;
+}
+
