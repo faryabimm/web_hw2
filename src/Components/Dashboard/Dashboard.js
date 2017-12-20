@@ -27,6 +27,7 @@ class DiscoverFireBase extends React.Component {
 }
 
 export default class Dashboard extends React.Component {
+
     render() {
         return (
             <div className={'firebase_dash'} id="dashboard" style={{height: (window.innerHeight-48) + 'px'}}>
