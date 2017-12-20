@@ -48,10 +48,12 @@ class LeftNavFooter extends React.Component {
         );
     }
 }
-var showLargeNav=true;
+
+var showLargeNav = true;
+
 class Sidebar_collapse_button extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
         this.onClick = this.onClick.bind(this);
         console.log('salam');
@@ -59,7 +61,7 @@ class Sidebar_collapse_button extends React.Component {
 
     onClick(e) {
         e.preventDefault();
-        showLargeNav=!showLargeNav;
+        showLargeNav = !showLargeNav;
         console.log(showLargeNav);
     }
 
@@ -75,7 +77,7 @@ class Sidebar_collapse_button extends React.Component {
 export default class LargeNavbar extends React.Component {
 
     render() {
-        if (showLargeNav)
+        if (showLargeNav) {
             return (
                 <div className={'flex-col-container z-index-modifier'} id="large_navbar ">
                     <div className={'firebase_left_nav'}>
@@ -109,20 +111,19 @@ export default class LargeNavbar extends React.Component {
                         </div>
                         <LeftNavFooter/>
 
-                        <Sidebar_collapse_button/>
+                        <Sidebar_collapse_button onClick={() => click_large_collapse()}/>
                     </div>
 
                 </div>
             );
-        return(
-            <div></div>
-        );
+        } else {
+            return (
+                <div></div>
+            );
+        }
     }
 }
 
 function click_large_collapse() {
-    var x = document.getElementById("small_navbar");
-    var y = document.getElementById("large_navbar");
-    x.style.display = "inline";
-    y.style.display = "none";
+    showLargeNav=!showLargeNav;
 }
