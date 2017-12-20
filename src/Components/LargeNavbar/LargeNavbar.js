@@ -2,17 +2,18 @@ import React from 'react'
 import NavbarItem from "../NavbarItem/NavbarItem";
 import NavbarLabel from "../NavbarLabel/NavbarLabel";
 
+
 class LeftNavHeader extends React.Component {
-    render () {
+    render() {
         return (
             <div className={'left_nav_header'}>
                 <div className={'left_nav_header_modifier'}>
                     <div className={'navbar_item'}>
-                        <i className={'mdi mdi-home'} />
+                        <i className={'mdi mdi-home'}/>
                         <h1 className={'left_nav_header_overview_modifier'}>Overview</h1>
                     </div>
                     <div className={'navbar_item'} id="settings">
-                        <i className={'mdi mdi-settings'} />
+                        <i className={'mdi mdi-settings'}/>
                     </div>
                 </div>
 
@@ -47,51 +48,81 @@ class LeftNavFooter extends React.Component {
         );
     }
 }
+var showLargeNav=true;
+class Sidebar_collapse_button extends React.Component {
 
-export default class LargeNavbar extends React.Component {
+    constructor(){
+        super();
+        this.onClick = this.onClick.bind(this);
+        console.log('salam');
+    }
+
+    onClick(e) {
+        e.preventDefault();
+        showLargeNav=!showLargeNav;
+        console.log(showLargeNav);
+    }
+
     render() {
         return (
-            <div className={'flex-col-container z-index-modifier'} id="large_navbar "  >
-                <div className={'firebase_left_nav'}>
-                    <div id="scrollable1" style={{height: (window.innerHeight-154) + 'px'}}>
-                        <LeftNavHeader/>
+            <button class={'sidebar_collapse'}>
+                <i class={'mdi mdi-chevron-left'}></i>
+            </button>
+        )
+    }
+}
 
-                        <NavbarItem icon='mdi mdi-google-analytics' text='Analytics' />
+export default class LargeNavbar extends React.Component {
 
-                        <NavbarLabel title='develop' />
+    render() {
+        if (showLargeNav)
+            return (
+                <div className={'flex-col-container z-index-modifier'} id="large_navbar ">
+                    <div className={'firebase_left_nav'}>
+                        <div id="scrollable1" style={{height: (window.innerHeight - 154) + 'px'}}>
+                            <LeftNavHeader/>
 
-                        <NavbarItem icon='mdi mdi-account-multiple' text='Authentication' />
-                        <NavbarItem icon='mdi mdi-dns' text='Database' />
-                        <NavbarItem icon='mdi mdi-folder-image' text='Storage' />
-                        <NavbarItem icon='mdi mdi-earth' text='Hosting' />
-                        <NavbarItem icon='mdi mdi-json' text='Functions' />
-                        <NavbarItem icon='mdi mdi-checkbox-marked-outline' text='Test Lab' />
-                        <NavbarItem icon='mdi mdi-bug' text='Crash Reporting' />
-                        <NavbarItem icon='mdi mdi-gauge' text='Performance' />
+                            <NavbarItem icon='mdi mdi-google-analytics' text='Analytics'/>
 
-                        <NavbarLabel title='grow' />
+                            <NavbarLabel title='develop'/>
 
-                        <NavbarItem icon='mdi mdi-message-bulleted' text='Notification' />
-                        <NavbarItem icon='mdi mdi-source-branch' text='Remote Config' />
-                        <NavbarItem icon='mdi mdi-link' text='Dynamic Links' />
+                            <NavbarItem icon='mdi mdi-account-multiple' text='Authentication'/>
+                            <NavbarItem icon='mdi mdi-dns' text='Database'/>
+                            <NavbarItem icon='mdi mdi-folder-image' text='Storage'/>
+                            <NavbarItem icon='mdi mdi-earth' text='Hosting'/>
+                            <NavbarItem icon='mdi mdi-json' text='Functions'/>
+                            <NavbarItem icon='mdi mdi-checkbox-marked-outline' text='Test Lab'/>
+                            <NavbarItem icon='mdi mdi-bug' text='Crash Reporting'/>
+                            <NavbarItem icon='mdi mdi-gauge' text='Performance'/>
 
-                        <NavbarLabel title='earn' />
+                            <NavbarLabel title='grow'/>
 
-                        <NavbarItem icon='mdi mdi-case-sensitive-alt' text='AdMob' />
+                            <NavbarItem icon='mdi mdi-message-bulleted' text='Notification'/>
+                            <NavbarItem icon='mdi mdi-source-branch' text='Remote Config'/>
+                            <NavbarItem icon='mdi mdi-link' text='Dynamic Links'/>
+
+                            <NavbarLabel title='earn'/>
+
+                            <NavbarItem icon='mdi mdi-case-sensitive-alt' text='AdMob'/>
 
 
-                    </div>
-                    <LeftNavFooter/>
+                        </div>
+                        <LeftNavFooter/>
 
-                        <button className={'sidebar_collapse_collapse'} onclick="click_large_collapse()">
-                            <i className={'mdi mdi-chevron-left'} />
-                        </button>
+                        <Sidebar_collapse_button/>
                     </div>
 
                 </div>
-
-
-
+            );
+        return(
+            <div></div>
         );
     }
+}
+
+function click_large_collapse() {
+    var x = document.getElementById("small_navbar");
+    var y = document.getElementById("large_navbar");
+    x.style.display = "inline";
+    y.style.display = "none";
 }

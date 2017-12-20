@@ -1,19 +1,19 @@
-$(document).ready(function () {
-    resizeDiv();
-});
+// $(document).ready(function () {
+//     resizeDiv();
+// });
 
-window.onresize = function (event) {
-    resizeDiv();
-};
+// window.onresize = function (event) {
+//     resizeDiv();
+// };
 
-function resizeDiv() {
-    var viewport_height = $(window).height();
-
-    $('#scrollable1').css({'height': (viewport_height - 153) + 'px'});
-    $('#scrollable2').css({'height': (viewport_height - 92) + 'px'});
-    $('#dashboard').css({'height': (viewport_height - 48) + 'px'});
-    $('#scrollable3').css({'height': (viewport_height - 108) + 'px'});
-}
+// function resizeDiv() {
+//     var viewport_height = $(window).height();
+//
+//     $('#scrollable1').css({'height': (viewport_height - 153) + 'px'});
+//     $('#scrollable2').css({'height': (viewport_height - 92) + 'px'});
+//     $('#dashboard').css({'height': (viewport_height - 48) + 'px'});
+//     $('#scrollable3').css({'height': (viewport_height - 108) + 'px'});
+// }
 
 
 function show_left_dropdown() {
